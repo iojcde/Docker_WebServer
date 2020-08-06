@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  ubuntu-web:
+    dockerfile: ./ubuntu
+    command: sudo systemctl enable --now cockpit.socket
+    restart: always
+    ports: 
+      - 80:80

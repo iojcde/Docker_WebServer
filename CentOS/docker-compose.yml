@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  centosweb:
+    
+    build: ./    
+    command: 
+      - sudo systemctl enable --now cockpit.socket
+    
+    restart: 
+      - always
+
+    ports: 
+      - 80:80
