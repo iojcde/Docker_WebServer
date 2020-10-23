@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  arch_web:
+    dockerfile: ./arch
+    command: sudo systemctl enable --now cockpit.socket
+    restart: always
+    ports: 
+      - 80:80
