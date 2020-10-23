@@ -1,4 +1,4 @@
-FROM archlinux/archlinux
+FROM archlinux
 
 RUN pacman -Syu
 
