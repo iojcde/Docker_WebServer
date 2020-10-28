@@ -1,8 +1,10 @@
 version: "3"
 
 services:
-  debian_web:
-    dockerfile: ./debian
+  apache-debian:
+    build:
+      context: .
+      dockerfile: ./debian.dockerfile
     command: sudo systemctl enable --now cockpit.socket
     restart: always
     ports: 
